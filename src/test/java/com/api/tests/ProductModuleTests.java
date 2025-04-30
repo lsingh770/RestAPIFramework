@@ -26,7 +26,7 @@ public class ProductModuleTests extends BaseTest {
 
     @Test(groups = {POST})
     public void createProduct() {
-        var jsonBody = PayloadReader.loadPayload("create_product.son");
+        var jsonBody = PayloadReader.loadPayload("create_product.json");
 
         given().filter(new RestAssuredLoggingFilter())
                 .spec(SpecFactory.baseSpec())
