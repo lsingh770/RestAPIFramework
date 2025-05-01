@@ -98,7 +98,7 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 ## 📬 Contact
 
-For any inquiries or feedback, please contact [lsingh770](mailto:lsingh770@example.com).
+For any inquiries or feedback, please contact [lsingh770](mailto:lsingh770@gmail.com).
 
 ---
 
