@@ -18,7 +18,7 @@ public class OrderModuleTests extends BaseTest {
     public void getOrderById() {
         given().filter(new RestAssuredLoggingFilter())
                 .spec(SpecFactory.baseSpec()).pathParam("id", order_id)
-                .when().get("/orders/{id}")
+                .when().get("/carts/{id}")
                 .then().statusCode(200);
     }
 
@@ -30,8 +30,8 @@ public class OrderModuleTests extends BaseTest {
         given().filter(new RestAssuredLoggingFilter())
                 .spec(SpecFactory.baseSpec())
                 .body(jsonBody)
-                .when().post("/orders")
-                .then().statusCode(201);
+                .when().post("/carts")
+                .then().statusCode(200);
     }
 
     @Test(groups = {PUT})
@@ -40,7 +40,7 @@ public class OrderModuleTests extends BaseTest {
                 .spec(SpecFactory.baseSpec())
                 .body("{ \"quantity\": 3 }")
                 .pathParam("id", order_id)
-                .when().put("/orders/{id}")
+                .when().put("/carts/{id}")
                 .then().statusCode(200);
     }
 
@@ -49,7 +49,7 @@ public class OrderModuleTests extends BaseTest {
         given().filter(new RestAssuredLoggingFilter())
                 .spec(SpecFactory.baseSpec())
                 .pathParam("id", order_id)
-                .when().delete("/orders/{id}")
-                .then().statusCode(204);
+                .when().delete("/carts/{id}")
+                .then().statusCode(200);
     }
 }

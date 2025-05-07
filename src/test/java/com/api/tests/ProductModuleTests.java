@@ -32,7 +32,7 @@ public class ProductModuleTests extends BaseTest {
                 .spec(SpecFactory.baseSpec())
                 .body(jsonBody)
                 .when().post("/products")
-                .then().statusCode(201);
+                .then().statusCode(200);
     }
 
     @Test(groups = {PATCH})
@@ -51,6 +51,6 @@ public class ProductModuleTests extends BaseTest {
                 .spec(SpecFactory.baseSpec())
                 .pathParam("id", product_id)
                 .when().delete("/products/{id}")
-                .then().statusCode(204);
+                .then().statusCode(200);
     }
 }

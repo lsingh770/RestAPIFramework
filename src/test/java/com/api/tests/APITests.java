@@ -67,7 +67,7 @@ public class APITests extends BaseTest {
         Response response = request.delete("/posts/1");
         logger().info("Sending DELETE Request");
 
-        Assert.assertEquals(response.getStatusCode(), 400);
+        Assert.assertEquals(response.getStatusCode(), 200);
         logger().pass("DELETE Request Passed");
     }
 }

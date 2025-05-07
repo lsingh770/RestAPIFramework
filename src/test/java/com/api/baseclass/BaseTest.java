@@ -1,21 +1,12 @@
 package com.api.baseclass;
 
 import com.api.utils.ReportLabelUpdater;
-import io.restassured.RestAssured;
-import io.restassured.filter.Filter;
-import io.restassured.filter.FilterContext;
-import io.restassured.response.Response;
-import io.restassured.specification.FilterableRequestSpecification;
-import io.restassured.specification.FilterableResponseSpecification;
-import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.*;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.testng.ITestResult;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.lang.reflect.Method;
 
 public class BaseTest {

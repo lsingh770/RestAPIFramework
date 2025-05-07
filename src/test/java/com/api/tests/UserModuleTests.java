@@ -24,7 +24,7 @@ public class UserModuleTests extends BaseTest {
                 .pathParam("id", user_id)
                 .when().get("/users/{id}")
                 .then().statusCode(200)
-                .body("id", equalTo(user_id));
+                .body("id", equalTo(Integer.parseInt(user_id)));
     }
 
     @Test(groups = {POST})
@@ -35,7 +35,7 @@ public class UserModuleTests extends BaseTest {
                 .spec(SpecFactory.baseSpec())
                 .body(body)
                 .when().post("/users")
-                .then().statusCode(201);
+                .then().statusCode(200);
     }
 
     @Test(groups = {PUT})
@@ -54,6 +54,6 @@ public class UserModuleTests extends BaseTest {
                 .spec(SpecFactory.baseSpec())
                 .pathParam("id", user_id)
                 .when().delete("/users/{id}")
-                .then().statusCode(204);
+                .then().statusCode(200);
     }
 }

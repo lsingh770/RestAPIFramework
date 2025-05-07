@@ -1,4 +1,8 @@
 {
-  "name": "Laptop",
-  "price": 999
+  "id": 0,
+  "title": "product",
+  "price": 0.1,
+  "description": "product_desc",
+  "category": "product_category",
+  "image": "http://example.com"
 }
